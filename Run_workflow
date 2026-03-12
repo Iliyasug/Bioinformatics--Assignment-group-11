@@ -1,91 +1,55 @@
-Bioinformatics Assignment – Group 4 I. Project Title
+#!/bin/bash
 
-Multi-Language Bioinformatics Workflow Automation Using Bash
+# Create CSV header
+echo "Name,Email,Slack Username,Area of Interest" > artifacts/output.csv
 
-II. Brief Overview of Introduction to Bioinformatics
+# Run Python scripts
+for file in scripts/*.py; do
+python "$file" >> artifacts/output.csv
+done
 
-Bioinformatics is an interdisciplinary field that integrates biology, computer science, statistics, and information technology to analyze and interpret biological data. With the rapid advancement of sequencing technologies and molecular biology research, enormous amounts of biological data are generated daily. Bioinformatics provides the computational tools and methods required to store, organize, analyze, and visualize this complex data.
+# Run R scripts
+for file in scripts/*.R; do
+Rscript "$file" >> artifacts/output.csv
+done
 
-One of the major applications of bioinformatics is in genomics, where computational methods are used to study DNA sequences, identify genes, and understand genetic variation. It is also used in proteomics, transcriptomics, systems biology, drug discovery, and evolutionary biology. Bioinformatics tools help researchers analyze large biological datasets efficiently and derive meaningful insights that would be difficult to obtain using traditional laboratory methods alone.
+# Run Perl scripts
+for file in scripts/*.pl; do
+perl "$file" >> artifacts/output.csv
+done
 
-Programming and automation are essential components of bioinformatics. Researchers frequently use programming languages and computational workflows to automate repetitive tasks, analyze biological datasets, and ensure reproducibility of results.
+# Run JavaScript scripts
+for file in scripts/*.js; do
+node "$file" >> artifacts/output.csv
+done
 
-III. Description of the Assignment
+# Run Ruby scripts
+for file in scripts/*.rb; do
+ruby "$file" >> artifacts/output.csv
+done
 
-This project demonstrates collaborative software development and workflow automation using multiple programming languages in a bioinformatics context. Each member of the group contributed a script written in a different programming language. These scripts generate structured information about the contributors and their bioinformatics interests.
+# Run Go scripts
+for file in scripts/*.go; do
+go run "$file" >> artifacts/output.csv
+done
 
-A Bash workflow script (run_workflow.sh) is used to automate the execution of all scripts within the repository. The workflow collects outputs from each script and combines them into a structured CSV file stored in the artifacts directory. This CSV file can then be used for downstream analysis or integration with other bioinformatics tools.
+# Run C programs
+for file in scripts/*.c; do
+filename=$(basename "$file" .c)
+gcc "$file" -o "scripts/$filename"
+"./scripts/$filename" >> artifacts/output.csv
+done
 
-The main objectives of this assignment are to:
+# Run C++ programs
+for file in scripts/*.cpp; do
+filename=$(basename "$file" .cpp)
+g++ "$file" -o "scripts/$filename"
+"./scripts/$filename" >> artifacts/output.csv
+done
 
-Demonstrate the use of multiple programming languages in bioinformatics. Implement workflow automation using Bash scripting. Practice collaborative software development using GitHub. Generate structured data outputs suitable for downstream analysis. Develop clear and professional project documentation using
-
-NAme of the contributor
-
-1.Hamza sadisu
-
-2.sulaiman Abubakar
-
-3.fatima isyaku waxiri
-
-4.basiru Adamu damagere
-
-5.zahra usamn iliyasu
-
-GIthub username
-
-Name: Hamza Sadisu GitHub Username: hamzasadisu47-svg
-
-Name: Fatima Waziri
-
-GitHub Username:
-
-fatimawaziri528-oss
-
-Name: Abubakar Sulaiman
-
-GitHub Username:
-
-Abubakrsulaiman-dot
-
-Name: Basiru Adamudamari
-
-GitHub Username:
-
-basiruadamudamare
-
-Name: Zahra Husman
-
-GitHub Username:
-
-zahrahusman
-
-Group Members Matriculation Numbers
-
-S/N	Matric Number
-1	BASUG/UG/BMS/ANA/22/4858
-2	BASUG/UG/BMS/ANA/22/6477
-3	BASUG/UG/BMS/ANA/22/4104
-4	BASUG/UG/BMS/ANA/22/6276
-5	BASUG/UG/BMS/ANA/22/7485
-Area of interest in bionformatic hamza sadisu:genomic
-
-fatima isyaku waziri:trascriptomic
-
-sulaiman Abubakr:trascriptomic
-
-basiru Adamu damare:genomic
-
-zahra usaman iliyasu:proteomic
-
-Authors
-
-This project was collaboratively developed by Group 3 as part of a Bioinformatics coursework assignment for 400 Level students in the Department of Human Anatomy, Sa’adu Zungur University, Bauchi State, Nigeria.
-
-lead Author/Project maintainer
-
-Hamza sadisu - workflow design, python script Development, Repository management. Github: https://github.com/Hamzasadisu47-svg/Bioinformatics-Assignment-/blob/main/README.md
-
-Conclusion
-
-This project introduces students to the fundamentals of bioinformatics and collaborative programming. Through the use of GitHub and documentation practices, students gain experience in teamwork, coding, and project organization which are essential skills in modern bioinformatics research.
+# Run Java programs
+for file in scripts/*.java; do
+filename=$(basename "$file" .java)
+javac "$file"
+java -cp scripts "$filename" >> artifacts/output.csv
+done
