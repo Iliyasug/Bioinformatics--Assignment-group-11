@@ -1,0 +1,4 @@
+public class mary{
+    public static void main(String[] args) {
+        System.out.println("Mary,maryjonah2021@gmail.com,,genomic ");
+    }
