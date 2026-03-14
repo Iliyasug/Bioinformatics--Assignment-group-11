@@ -30,15 +30,15 @@ RabiatAbdulmalik1
 
 S/N	Matric Number
 1	BASUG/UG/BMS/ANA/22/4135
-2	BASUG/UG/BMS/ANA/22/
-3	BASUG/UG/BMS/ANA/22/
+2	BASUG/UG/BMS/ANA/22/5280
+3	BASUG/UG/BMS/ANA/22/8851
 4	BASUG/UG/BMS/ANA/22/
 5	BASUG/UG/BMS/ANA/22/
 Area of interest in bionformatic hamza sadisu:genomic
 
 Iliyasu :genomic
 Rabi,atu:trancriptomic 
-
+Mary:genomic
 Authors
 
 This project was collaboratively developed by Group 11 as part of a Bioinformatics coursework assignment for 400 Level students in the Department of Human Anatomy, Sa’adu Zungur University, Bauchi State, Nigeria.
